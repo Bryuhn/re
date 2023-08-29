@@ -17,7 +17,7 @@ const Form = () =>{
               <label htmlFor="name">Name</label>
                   <input type="text" id="name" className="input"/>
                   <reCAPTCHA
-                  sitekey={process.env.REACT_APP_SITE_KEY} 
+                  sitekey="eMnAAAAAIv9j1MXUDgUL3Gz4cA0cQ_X9gRD" 
                   ref={captchaRef}
                   />
               <button>Submit </button>
