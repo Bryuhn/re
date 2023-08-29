@@ -1,21 +1,19 @@
-import './App.css';
-import ReCAPTCHA from "react-google-recaptcha";
+import reCAPTCHA from "react-google-recaptcha"
+import React, { useRef } from 'react';
 
-function App() {
-  return (
-    <div>
-        <form>
-          <label htmlFor="name">Name</label>
-              <input type="text" id="name" className="input"/>
-              <div>
-                <ReCAPTCHA
-                sitekey={"6LfQ1N8nAAAAAAjSnZz6mLgQdwV8soApVI5EujaP"}
-                />
-               </div>
-          <button>Submit</button>
-      </form>
-    </div>
-  );
+const Form = () =>{
+  const captchaRef = useRef(null)
+
+  return(
+          <form>
+              <label htmlFor="name">Name</label>
+                  <input type="text" id="name" className="input"/>
+                  <reCAPTCHA
+                  sitekey={process.env.REACT_APP_SITE_KEY} 
+                  ref={captchaRef}
+                  />
+              <button>Submit</button>
+          </form>
+  )
 }
-
-export default App;
+export default Form
