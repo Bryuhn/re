@@ -1,5 +1,5 @@
 import './App.css';
-import reCAPTCHA from "react-google-recaptcha"
+import ReCAPTCHA from "react-google-recaptcha";
 
 function App() {
   return (
@@ -7,9 +7,11 @@ function App() {
         <form>
           <label htmlFor="name">Name</label>
               <input type="text" id="name" className="input"/>
-              <reCAPTCHA
-              sitekey={process.env.REACT_APP_SITE_KEY}
-               />
+              <div>
+                <ReCAPTCHA
+                sitekey={process.env.REACT_APP_SITE_KEY}
+                />
+               </div>
           <button>Submit</button>
       </form>
     </div>
