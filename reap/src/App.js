@@ -12,7 +12,7 @@ const Form = () =>{
                   sitekey={process.env.REACT_APP_SITE_KEY} 
                   ref={captchaRef}
                   />
-              <button>Submit</button>
+              <button>Submit </button>
           </form>
   )
 }
