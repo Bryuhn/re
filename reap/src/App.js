@@ -3,9 +3,17 @@ import React, { useRef } from 'react';
 
 const Form = () =>{
   const captchaRef = useRef(null)
+  const token = captchaRef.current.getValue();
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    const token = captchaRef.current.getValue();
+    captchaRef.current.reset();
+}
+
+
 
   return(
-          <form>
+          <form onSubmit={handleSubmit} >
               <label htmlFor="name">Name</label>
                   <input type="text" id="name" className="input"/>
                   <reCAPTCHA
