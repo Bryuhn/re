@@ -9,7 +9,7 @@ function App() {
               <input type="text" id="name" className="input"/>
               <div>
                 <ReCAPTCHA
-                sitekey={process.env.REACT_APP_SITE_KEY}
+                sitekey={"6LfQ1N8nAAAAAAjSnZz6mLgQdwV8soApVI5EujaP"}
                 />
                </div>
           <button>Submit</button>
